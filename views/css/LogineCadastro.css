@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+/* Reset e estilos gerais */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background-image {
+  background-color: #31511e;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.toggle-link {
+  cursor: pointer;
+  color: #1a1a19;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #1a1a19;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: green;
+}
+
+.superior-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #859f3d;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  height: 70px;
+}
+
+.superior-bar p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  transition: text-shadow 0.6s;
+}
+
+.superior-bar p:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+
+.superior-bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.superior-bar ul li {
+  margin: 0 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.superior-bar ul li:hover {
+  color: #fffefd;
+  transition: 0.4s;
+}
+
+#navDrop {
+  background-color: #f6fcdf;
+  color: #1a1a19;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#navDrop:hover {
+  background-color: #faf7f0;
+  transform: scale(1.05);
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Itens Recicláveis</title>
+    <link rel="stylesheet" href="../css/TelaReciclavel.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">Cancycle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="Home.html">SOBRE NÓS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PerfilUsuario.html">MEU PERFIL</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LogineCadastro.html">ENTRE OU CADASTRE-SE!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="home" class="header-content text-white text-center p-5 rounded mt-4">
+            <h1 class="display-4 fw-bold mb-3">Conheça os Itens Recicláveis</h1>
+            <p class="lead mx-auto" style="max-width: 800px">
+                Saiba mais sobre os materiais que podem ser reciclados e como eles
+                contribuem para um planeta mais sustentável.
+            </p>
+        </div>
+    </header>
+
+    <div class="container text-center py-4">
+        <main class="container my-5">
+            <div class="row text-center justify-content-center">
+                <!-- Item Reciclável 1 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#modalPlastico">
+                        <img src="assets/lata.jpeg" class="card-img-top" alt="Plástico" />
+                        <div class="card-body">
+                            <h5 class="card-title">Plástico</h5>
+                            <p class="card-text">Recicle o plástico para reduzir o impacto ambiental.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Reciclável 2 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#modalOleo">
+                        <img src="assets/fortaleza.jpg " class="card-img-top" alt="Óleo" />
+                        <div class="card-body">
+                            <h5 class="card-title">Óleo</h5>
+                            <p class="card-text">Reciclar óleo evita poluição e protege a água.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item Reciclável 3 -->
+                <div class="col-md-4 col-sm-6 mb-4 d-flex align-items-stretch">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#modalVidro">
+                        <img src="assets/miami.jpeg" class="card-img-top" alt="Vidro" />
+                        <div class="card-body">
+                            <h5 class="card-title">Vidro</h5>
+                            <p class="card-text">O vidro pode ser reciclado infinitamente sem perder qualidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals para Inserir CPF, Pontos e Quantidade -->
+    <!-- Modal para Plástico -->
+    <div class="modal fade" id="modalPlastico" tabindex="-1" aria-labelledby="modalPlasticoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPlasticoLabel">Registrar Plástico</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cpfPlastico" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpfPlastico" placeholder="Digite seu CPF"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="pontosPlastico" class="form-label">Pontos</label>
+                            <input type="number" class="form-control" id="pontosPlastico"
+                                placeholder="Pontos a ser adicionados" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantidadePlastico" class="form-label">Quantidade</label>
+                            <input type="number" class="form-control" id="quantidadePlastico"
+                                placeholder="Quantidade de itens" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Óleo -->
+    <div class="modal fade" id="modalOleo" tabindex="-1" aria-labelledby="modalOleoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalOleoLabel">Registrar Óleo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cpfOleo" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpfOleo" placeholder="Digite seu CPF"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="pontosOleo" class="form-label">Pontos</label>
+                            <input type="number" class="form-control" id="pontosOleo"
+                                placeholder="Pontos a ser adicionados" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantidadeOleo" class="form-label">Quantidade</label>
+                            <input type="number" class="form-control" id="quantidadeOleo"
+                                placeholder="Quantidade de óleo (litros)" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para Vidro -->
+    <div class="modal fade" id="modalVidro" tabindex="-1" aria-labelledby="modalVidroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalVidroLabel">Registrar Vidro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cpfVidro" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpfVidro" placeholder="Digite seu CPF"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="pontosVidro" class="form-label">Pontos</label>
+                            <input type="number" class="form-control" id="pontosVidro"
+                                placeholder="Pontos a ser adicionados" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantidadeVidro" class="form-label">Quantidade</label>
+                            <input type="number" class="form-control" id="quantidadeVidro"
+                                placeholder="Quantidade de itens" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

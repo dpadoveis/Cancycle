@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="../css/PerfilUsuario.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="superior-bar">
+      <p>Cancycle</p>
+      <ul>
+        <li>
+          <a href="TelaApoiadores.html" class="nav-button">Resgate seus cupons</a>
+        </li>
+        <li>
+          <a href="Home.html" class="nav-button">Sair</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="home" class="header-content">
+      <h2 class="text-center mb-4">Meu Perfil</h2>
+      <div class="card-body">
+        <p><strong>Nome:</strong> <span id="nome">Carregando...</span></p>
+        <p><strong>Email:</strong> <span id="email">Carregando...</span></p>
+        <p><strong>CPF:</strong> <span id="cpf">Carregando...</span></p>
+        <p><strong>Pontos:</strong> <span id="pontos">0</span></p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="reciclagem" class="pacotes">
+      <h1 class="pacotes-title">PEDIDOS DISPONÍVEIS</h1>
+
+      <div class="pacotes-cards">
+        <!-- Card de Alumínio -->
+        <div class="card">
+          <div class="card-tag card-tag-bottom">
+            <p>500 pontos</p>
+          </div>
+          <img class="card-image" src="../../img/lata.jpeg" alt="Alumínio" height="50" width="50" />
+          <div class="card-content">
+            <h2>Digão Lanches</h2>
+            <p>50 latinhas de alumínio de refrigerantes e sucos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/PerfilUsuario.js"></script>
+</body>
+
+</html>

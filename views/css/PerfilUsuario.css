@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: calc(50vh - 100px);
+  background-color: #31511e;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #859f3d;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  height: 70px;
+}
+
+header nav p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  transition: text-shadow 0.6s;
+}
+
+header nav p:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+header nav ul li:hover {
+  color: #fffefd;
+  transition: 0.4s;
+}
+
+#navDrop {
+  background-color: #f6fcdf;
+  color: #1a1a19;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#navDrop:hover {
+  background-color: #faf7f0;
+  transform: scale(1.05);
+}
+
+.header-content {
+  color: #f6fcdf;
+  font-weight: bold;
+  max-width: 700px;
+  margin: 80px auto 0;
+  margin-top: 10px;
+  text-align: center;
+  animation: text-move 2s ease forwards;
+  padding-top: 80px;
+}
+
+.header-content h1 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@keyframes text-move {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(43, 1, 99);
+  color: #fff;
+}
+
+.pacotes {
+  background-color: #f6fcdf;
+  padding: 25px;
+}
+
+.pacotes .pacotes-cards {
+  margin: auto;
+  max-width: 1800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pacotes .pacotes-title {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+.pacotes .card {
+  margin: 50px;
+  width: 280px;
+  height: 380px;
+  background: #cbd2a4;
+  border-radius: 24px 0px;
+  box-shadow: 0px 0px 4px -1px #222;
+  position: relative;
+  transition: all 1s;
+}
+
+.pacotes .card:hover {
+  transform: scale(1.1);
+}
+
+.pacotes .card-image {
+  width: 280px;
+  height: 200px;
+  border-radius: 24px 0 0 0;
+  object-fit: cover;
+}
+
+.pacotes .card-content {
+  padding: 0 15px;
+}
+
+.pacotes .card-content h1 {
+  font-size: 0.9rem;
+}
+
+.pacotes .card-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pacotes .card-content ul li {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  margin: 3px 0px;
+  color: gray;
+  font-weight: bold;
+}
+
+.pacotes .card-content li svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.pacotes .card .card-tag-top {
+  position: absolute;
+  background: #f56c11;
+  right: 0;
+  top: 15px;
+  border-radius: 8px 0 0 8px;
+  padding: 5px 10px;
+  box-shadow: 1px 2px 5px -2px #222;
+}
+
+.pacotes .card .card-tag-bottom {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  background: #008000;
+  border-radius: 0 8px 8px 0;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 4px 1px #222;
+}
+
+.pacotes .card .card-tag p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}

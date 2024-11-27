@@ -1,0 +1,126 @@
+/* Estilo para o fundo e o cabeçalho */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4e6b30;
+    color: #ffffff;
+    padding-bottom: 2rem;
+}
+
+.navbar {
+    background-color: #4e6b30;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #dcdcdc;
+}
+
+/* Estilo para o cabeçalho de boas-vindas */
+.header-content {
+    background-color: #4e6b30;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-content h1 {
+    color: #ffffff;
+}
+
+.header-content p {
+    color: #dcdcdc;
+}
+
+/* Estilo dos cartões */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #4e6b30;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666666;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Modal styling */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #4e6b30;
+    color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-body label {
+    color: #4e6b30;
+    font-weight: bold;
+}
+
+.modal-body .form-control {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.modal-footer .btn-primary {
+    background-color: #4e6b30;
+    border: none;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #4e6b30;
+}
+
+/* Botão fechar do modal */
+.btn-close {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    color: #ffffff;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
