@@ -26,7 +26,7 @@
       <div class="form-group text-center mb-3">
         <h5>Para prosseguir, escolha uma opção</h5>
         <label for="tipoCadastro">Você é:</label>
-        <select id="tipoCadastro" class="form-control" onchange="toggleCadastro()">
+        <select id="tipoCadastro" class="form-control">
           <option value="">Selecione</option>
           <option value="usuario">Pessoa</option>
           <option value="estabelecimento">Estabelecimento</option>
@@ -59,9 +59,7 @@
             <input type="password" class="form-control" id="senhaCadastroUsuario" placeholder="Digite sua senha"
               required />
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Cadastrar
-          </button>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         </form>
       </div>
 
@@ -88,9 +86,7 @@
             <input type="password" class="form-control" id="senhaCadastroEstabelecimento" placeholder="Digite a senha"
               required />
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Cadastrar
-          </button>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         </form>
       </div>
 
@@ -100,7 +96,7 @@
         <form id="formularioLogin">
           <div class="form-group">
             <label for="tipoLogin">Selecione o tipo:</label>
-            <select id="tipoLogin" class="form-control" onchange="atualizarCampoCpfCnpj()" required>
+            <select id="tipoLogin" class="form-control">
               <option value="">Selecione</option>
               <option value="usuario">Usuário</option>
               <option value="estabelecimento">Estabelecimento</option>
@@ -115,9 +111,7 @@
             <label for="senhaLogin">Senha</label>
             <input type="password" class="form-control" id="senhaLogin" placeholder="Digite sua senha" required />
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Entrar
-          </button>
+          <button type="submit" class="btn btn-primary btn-block">Entrar</button>
         </form>
       </div>
     </div>

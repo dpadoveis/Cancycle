@@ -6,11 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then((data) => {
-            // Atualiza o perfil e a saudação
             document.getElementById("nome").textContent = data.nome;
             document.getElementById("email").textContent = data.email;
             document.getElementById("cpf").textContent = data.cpf_cnpj || "Não informado";
-            document.getElementById("user-greeting").textContent = `Olá, ${data.nome}`;
+            document.getElementById("pontos").textContent = data.pontos || 0;
         })
         .catch((error) => {
             console.error("Erro ao carregar os dados do usuário:", error);

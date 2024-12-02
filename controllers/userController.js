@@ -62,7 +62,7 @@ const UserController = {
 
     // Busca o usuário atual
     getCurrentUser: (req, res) => {
-        const sql = `SELECT cpf_cnpj, nome, email FROM usuarios ORDER BY id DESC LIMIT 1`;
+        const sql = `SELECT cpf_cnpj,nome,email,pontos FROM usuarios ORDER BY id DESC LIMIT 1`;
         UserModel.executeQuery(sql, (err, results) => {
             if (err) {
                 console.error('Erro ao buscar dados do usuário:', err);
