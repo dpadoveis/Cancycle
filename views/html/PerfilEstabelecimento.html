@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Estabelecimento</title>
+    <link rel="stylesheet" href="../css/PerfilUsuario.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="superior-bar">
+            <p>Cancycle</p>
+            <ul>
+                <li>
+                    <a href="Home.html" class="nav-button">Sair</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="home" class="header-content">
+            <h2 class="text-center mb-4">Perfil do Estabelecimento</h2>
+            <div class="card-body">
+                <p><strong>Nome:</strong> <span id="nome">Carregando...</span></p>
+                <p><strong>Email:</strong> <span id="email">Carregando...</span></p>
+                <p><strong>CNPJ:</strong> <span id="cnpj">Carregando...</span></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="pedidos" class="pacotes">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="pacotes-title">Seus Pedidos</h1>
+                <button class="btn btn-primary" id="addPedidoBtn">Adicionar Pedido</button>
+            </div>
+
+            <div class="pacotes-cards" id="listaPedidos">
+                <!-- Pedidos serão adicionados dinamicamente -->
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/PerfilEstabelecimento.js"></script>
+</body>
+
+</html>

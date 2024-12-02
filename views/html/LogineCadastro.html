@@ -19,7 +19,6 @@
     </div>
   </nav>
 
-
   <!-- Área de Formulário de Cadastro e Login -->
   <div class="background-image">
     <div class="container form-container">
@@ -27,7 +26,7 @@
       <div class="form-group text-center mb-3">
         <h5>Para prosseguir, escolha uma opção</h5>
         <label for="tipoCadastro">Você é:</label>
-        <select id="tipoCadastro" class="form-control" onchange="toggleForm()">
+        <select id="tipoCadastro" class="form-control" onchange="toggleCadastro()">
           <option value="">Selecione</option>
           <option value="usuario">Pessoa</option>
           <option value="estabelecimento">Estabelecimento</option>
@@ -93,10 +92,6 @@
             Cadastrar
           </button>
         </form>
-        <p class="text-center mt-3">
-          Já tem uma conta?
-          <span class="toggle-link" id="showLogin">Entrar</span>
-        </p>
       </div>
 
       <!-- Formulário de Login -->
@@ -104,8 +99,17 @@
         <h2 class="text-center mb-4">Login</h2>
         <form id="formularioLogin">
           <div class="form-group">
-            <label for="cpfCnpjLogin">CPF ou CNPJ</label>
-            <input type="text" class="form-control" id="cpfCnpjLogin" placeholder="Digite o CPF ou CNPJ" required />
+            <label for="tipoLogin">Selecione o tipo:</label>
+            <select id="tipoLogin" class="form-control" onchange="atualizarCampoCpfCnpj()" required>
+              <option value="">Selecione</option>
+              <option value="usuario">Usuário</option>
+              <option value="estabelecimento">Estabelecimento</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cpfCnpjLogin" id="labelCpfCnpj">CPF ou CNPJ</label>
+            <input type="text" class="form-control" id="cpfCnpjLogin" placeholder="Selecione um tipo acima" required
+              disabled />
           </div>
           <div class="form-group">
             <label for="senhaLogin">Senha</label>
@@ -124,15 +128,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="../js/LogineCadastro.js"></script>
-  <script>
-    function toggleForm() {
-      const tipoCadastro = document.getElementById("tipoCadastro").value;
-      document.getElementById("formCadastroUsuario").style.display =
-        tipoCadastro === "usuario" ? "block" : "none";
-      document.getElementById("formCadastroEstabelecimento").style.display =
-        tipoCadastro === "estabelecimento" ? "block" : "none";
-    }
-  </script>
 </body>
 
 </html>
