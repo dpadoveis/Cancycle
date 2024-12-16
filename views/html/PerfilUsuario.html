@@ -37,17 +37,20 @@
       <h1 class="pacotes-title">PEDIDOS DISPONÍVEIS</h1>
 
       <div class="pacotes-cards">
-        <!-- Card de Alumínio -->
-        <div class="card">
-          <div class="card-tag card-tag-bottom">
-            <p>500 pontos</p>
-          </div>
-          <img class="card-image" src="../../img/lata.jpeg" alt="Alumínio" height="50" width="50" />
-          <div class="card-content">
-            <h2>Digão Lanches</h2>
-            <p>50 latinhas de alumínio de refrigerantes e sucos</p>
+        <div id="pedidoContainer"></div>
+
+        <!-- Modal -->
+        <div id="pedidoModal" style="display:none;">
+          <div class="modal-content">
+            <span id="fecharModal" style="cursor:pointer;">&times;</span>
+            <h2>Verificar Pedido</h2>
+            <label for="codigoPedido">Digite o código do pedido:</label>
+            <input type="text" id="codigoPedido" placeholder="Código do pedido">
+            <button id="verificarCodigo">Verificar</button>
           </div>
         </div>
+
+
       </div>
     </section>
   </main>

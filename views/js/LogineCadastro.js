@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Alternância de formulários
     document.getElementById("showLogin").addEventListener("click", () => {
         document.getElementById("formLogin").style.display = "block";
         document.getElementById("formCadastroUsuario").style.display = "none";
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("formLogin").style.display = "none";
     });
 
-    // Atualizar o campo CPF/CNPJ no formulário de login
+
     document.getElementById("tipoLogin").addEventListener("change", function () {
         const tipoLogin = this.value;
         const campoCpfCnpj = document.getElementById("cpfCnpjLogin");
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Função para cadastrar usuário
     async function cadastrarUsuario(event) {
         event.preventDefault();
 
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Função para cadastrar estabelecimento
     async function cadastrarEstabelecimento(event) {
         event.preventDefault();
 
@@ -95,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Função para login
     async function login(event) {
         event.preventDefault();
 

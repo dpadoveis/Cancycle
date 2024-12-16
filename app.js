@@ -4,10 +4,13 @@ const db = require('./models/db');
 const cors = require('cors');
 require('dotenv').config();
 
+
+
+
 // Importando rotas
 const userRoutes = require('./routes/userRoutes');
 const establishmentRoutes = require('./routes/establishmentRoutes');
-
+const pedidoRoutes = require("./routes/pedidoRoutes");
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -20,6 +23,10 @@ app.use('/html', express.static(__dirname + '/views/html'));
 // Conectar rotas
 app.use('/usuarios', userRoutes);
 app.use('/estabelecimentos', establishmentRoutes);
+
+app.use('/pedidos', pedidoRoutes);
+
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

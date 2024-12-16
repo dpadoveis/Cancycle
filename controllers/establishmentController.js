@@ -7,7 +7,6 @@ const EstablishmentController = {
         try {
             const { cpf_cnpj, nome, email, senha } = req.body;
 
-            // Validações básicas
             if (!cpf_cnpj || !nome || !email || !senha) {
                 return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
             }
@@ -33,7 +32,6 @@ const EstablishmentController = {
     login: (req, res) => {
         const { cpf_cnpj, senha } = req.body;
 
-        // Validações básicas
         if (!cpf_cnpj || !senha) {
             return res.status(400).json({ message: 'CPF/CNPJ e senha são obrigatórios.' });
         }
@@ -62,7 +60,7 @@ const EstablishmentController = {
 
     // Busca o estabelecimento atual
     getCurrentEstablishment: (req, res) => {
-        const sql = `SELECT cpf_cnpj, nome, email FROM estabelecimentos ORDER BY id DESC LIMIT 1`;
+        const sql = 'SELECT cpf_cnpj, nome, email FROM estabelecimentos ORDER BY id DESC LIMIT 1';
         EstablishmentModel.executeQuery(sql, (err, results) => {
             if (err) {
                 console.error('Erro ao buscar dados do estabelecimento:', err);
@@ -73,7 +71,85 @@ const EstablishmentController = {
             }
             res.json(results[0]);
         });
-    }
+    },
+
+    // Método para adicionar um pedido
+    addPedido: (req, res) => {
+        console.log("addPedido foi chamada.");
+        console.log("Corpo da requisição:", req.body);
+
+        const { descricao, pontos } = req.body;
+
+        if (!descricao || !pontos) {
+            console.log("Erro: Campos obrigatórios ausentes.");
+            return res.status(400).json({ message: 'Descrição e pontos são obrigatórios.' });
+        }
+
+
+        const estabelecimentoCpfCnpj = req.user?.cpf_cnpj || '24126180000110'; 
+
+        EstablishmentModel.findEstablishmentByCpfCnpj(estabelecimentoCpfCnpj, (err, results) => {
+            if (err) {
+                console.error("Erro ao buscar dados do estabelecimento:", err);
+                return res.status(500).json({ message: 'Erro ao buscar os dados do estabelecimento.' });
+            }
+
+            if (results.length === 0) {
+                console.log("Estabelecimento não encontrado:", estabelecimentoCpfCnpj);
+                return res.status(404).json({ message: 'Estabelecimento não encontrado.' });
+            }
+
+            const { nome, cpf_cnpj } = results[0];
+
+            const novoPedido = {
+                nome_empresa: nome,
+                descricao,
+                cnpj: cpf_cnpj,
+                cpf: null, // Sempre nulo
+                pontos,
+            };
+
+            // Adicionar o pedido no banco
+            EstablishmentModel.addPedido(novoPedido, (err, result) => {
+                if (err) {
+                    console.error("Erro ao adicionar pedido:", err);
+                    return res.status(500).json({ message: 'Erro ao adicionar o pedido.' });
+                }
+
+                console.log("Pedido adicionado com sucesso:", novoPedido);
+                return res.status(201).json({
+                    message: 'Pedido adicionado com sucesso!',
+                    pedidoId: result.insertId,
+                    pedido: novoPedido,
+                });
+            });
+        });
+    },
+
+
+
+
+
+    // Buscar pedidos
+    getPedidos: (req, res) => {
+        const sql = `
+            SELECT 
+                p.id,
+                p.nome_empresa AS nome_empresa, 
+                p.descricao, 
+                p.pontos 
+            FROM pedidos p
+            ORDER BY p.id DESC
+        `;
+
+        EstablishmentModel.executeQuery(sql, (err, results) => {
+            if (err) {
+                console.error('Erro ao buscar pedidos:', err);
+                return res.status(500).json({ message: 'Erro ao buscar os pedidos.' });
+            }
+            res.json(results);
+        });
+    },
 };
 
 module.exports = EstablishmentController;

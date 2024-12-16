@@ -2,173 +2,170 @@
 
 /* Reset e estilos gerais */
 * {
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #f6fcdf;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6fcdf;
 }
 
 /* Navbar */
 header nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #FA4032;
-    color: #ffffff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ff773c;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  height: 70px;
 }
 
 header nav p {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.5em;
-    margin: 0;
-    transition: text-shadow 0.6s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0;
+  transition: text-shadow 0.6s;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 header nav ul li {
-    margin: 5 20px;
-    font-weight: bold;
-    margin-top: 15px;
+  margin: 5 20px;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 header nav ul li a:hover {
-    color: #cccccc;
+  color: #cccccc;
 }
 
 /* Header Content */
 .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    background-color: #FA4032;
-    margin-top: 70px;
-    /* Afasta da navbar fixa */
-    padding-bottom: 30px;
-    /* Espaço extra na parte inferior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: #ffcf00;
+  margin-top: 70px;
+  padding-bottom: 30px;
 }
 
 .header-image {
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Cards */
 main.container {
-    margin-top: 30px;
-    /* Garante espaçamento abaixo da header-content */
+  margin-top: 30px;
+  /* Garante espaçamento abaixo da header-content */
 }
 
 .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-body {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Estilos para a Modal */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #fdeecf;
-    /* Cor de fundo mais clara */
-    margin: 10% auto;
-    /* Alinha o modal verticalmente e centraliza */
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    /* Define uma largura fixa menor */
-    max-width: 20%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #fdeecf;
+  /* Cor de fundo mais clara */
+  margin: 10% auto;
+  /* Alinha o modal verticalmente e centraliza */
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  /* Define uma largura fixa menor */
+  max-width: 20%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /* Título da Modal */
 .modal-content h3 {
-    color: #ff4d4d;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: #ff4d4d;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Estilo do QR Code na Modal */
 .modal-content img {
-    width: 150px;
-    height: 150px;
-    border: 1px solid #ff4d4d;
-    border-radius: 5px;
-    margin: 20px 0;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ff4d4d;
+  border-radius: 5px;
+  margin: 20px 0;
 }
 
 /* Estilo da Senha Gerada */
 .modal-content p {
-    color: #333333;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 10px;
+  color: #333333;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /* Botão de Fechar */
 .close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover {
-    color: #000;
+  color: #000;
 }

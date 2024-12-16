@@ -7,7 +7,6 @@ const UserController = {
         try {
             const { cpf_cnpj, nome, email, senha } = req.body;
 
-            // Validações básicas
             if (!cpf_cnpj || !nome || !email || !senha) {
                 return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
             }
@@ -33,7 +32,6 @@ const UserController = {
     login: (req, res) => {
         const { cpf_cnpj, senha } = req.body;
 
-        // Validações básicas
         if (!cpf_cnpj || !senha) {
             return res.status(400).json({ message: 'CPF/CNPJ e senha são obrigatórios.' });
         }
@@ -73,7 +71,27 @@ const UserController = {
             }
             res.json(results[0]);
         });
-    }
+    },
+
+    getPedidos: (req, res) => {
+        const sql = `
+            SELECT 
+                p.nome_empresa AS nome_empresa, 
+                p.descricao, 
+                p.pontos 
+            FROM pedidos p
+            ORDER BY p.id DESC
+        `;
+    
+        UserModel.executeQuery(sql, (err, results) => {
+            if (err) {
+                console.error('Erro ao buscar pedidos:', err);
+                return res.status(500).json({ message: 'Erro ao buscar os pedidos.' });
+            }
+    
+            res.status(200).json(results);
+        });
+    }    
 };
 
 module.exports = UserController;

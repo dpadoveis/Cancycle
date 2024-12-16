@@ -1,2 +1,2 @@
-SELECT *
-FROM pedidos
+select *
+from usuarios

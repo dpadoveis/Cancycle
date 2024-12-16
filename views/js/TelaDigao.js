@@ -1,4 +1,4 @@
-// URL fixa para todos os QR Codes gerados
+
 const baseUrl = "https://www.instagram.com/digaoestacaobh/";
 
 // Função para exibir a modal com o QR Code e senha gerados
@@ -23,12 +23,10 @@ function gerarSenhaAleatoria(tamanho) {
     return senha;
 }
 
-// Fecha a modal ao clicar no botão de fechar
 closeModal.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
-// Fecha a modal ao clicar fora dela
 window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = "none";

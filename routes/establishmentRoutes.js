@@ -12,4 +12,14 @@ router.post('/login', EstablishmentController.login);
 // Rota para obter dados do estabelecimento atual
 router.get('/estabelecimentoAtual', EstablishmentController.getCurrentEstablishment);
 
+// Rota para add pedido 
+router.post('/addPedido', (req, res) => {
+    console.log("Rota /addPedido foi chamada!");
+    EstablishmentController.addPedido(req, res);
+});
+
+
+router.get('/pedidos', EstablishmentController.getPedidos);
+
+
 module.exports = router;
